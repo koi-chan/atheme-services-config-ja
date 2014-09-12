@@ -15,3 +15,5 @@ freenode系のIRCサーバーなどで使われている。
 
 * rpmbuild/  
 CentOS 6.5 でrpmを作った時に使った(作った)ファイルなど。詳しい使い方はディレクトリの中をご覧ください。
+* doc/  
+rpm の作成や、 Atheme IRC Services の設定の仕方など
