@@ -61,7 +61,7 @@ $ rpmdev-setuptree
 ### SPEC ファイル
 
 先ほども説明した、ビルドに必要な手順ファイル。
-このファイルと同じ階層に保存してあります、"atheme.spec"をダウンロードして、"rpmbuild/SPEC/"ディレクトリに保存してください。
+[こちら](https://raw.githubusercontent.com/koi-chan/atheme-services-config-ja/master/rpmbuild/atheme.spec)からダウンロードできます。"rpmbuild/SPEC/"ディレクトリに保存してください。
 
 デーモン起動スクリプトを使わない方は SPEC ファイルをテキストエディタで開いて、以下の2行を削除するか、行頭に半角シャープを挿入してコメントアウトしてください。
 
@@ -79,7 +79,7 @@ cp %{_sourcedir}/atheme-services %{buildroot}%{_initddir}/atheme-services
 
 ### SysVinit 用のデーモン起動スクリプト
 
-SPECファイルと同様にダウンロードし、こちらはアーカイブと同じ場所に保存します。  
+SPECファイルと同様に[こちら](https://raw.githubusercontent.com/koi-chan/atheme-services-config-ja/master/rpmbuild/atheme-services)からダウンロードし、こちらはアーカイブと同じ場所に保存します。  
 ファイル名を変更しないようにしてください。
 
 以上で、必要なファイルは集まりました。
@@ -109,8 +109,3 @@ SPECファイルを作った時には、すでに当方のシステムにはい�
 
 
 以上でビルドとインストールが完了しました。
-
-
-### 4\. Atheme IRC Services を動かすための初期設定
-
-

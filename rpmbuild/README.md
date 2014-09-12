@@ -28,4 +28,6 @@ http://www.vinelinux.org/docs/vine5/manuals/making-rpm.html
 例えばシステム起動時に自動的にデーモンを起動させるために必要なファイルとか。
 
 
-# 実際にrpmファイルを作成してシステムにインストールするための手順
+# 実際に rpm ファイルを作成・インストールする手順など
+
+../doc/rpmbuild.md や、 ../doc/setting.md をご覧ください。
