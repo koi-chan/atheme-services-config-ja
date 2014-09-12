@@ -49,13 +49,15 @@ $ rpmdev-setuptree
 
 ## 2\. ビルドするためのファイルの設置
 
-作業用ディレクトリに必要なファイルを設置します。必要なものは以下の3つです。
+作業用ディレクトリに必要なファイルを設置します。必要なものは以下の4つです。
 
 * SPEC ファイル
 * オリジナルの tar アーカイブ
 * SysVinit 用のデーモン起動スクリプト
+* 起動スクリプトが読み込む、オプション変数保存用ファイル
 
-3つ目は、システム起動時に自動的にデーモンを起動するために必要なものです。自動起動なんてしないという方は省略できます。
+3つ目は、システム起動時に自動的にデーモンを起動するために必要なものです。自動起動なんてしないという方は省略できます。  
+4つ目は、3つ目から読み込むファイルです。3つ目を使う人は必要です。  
 ただし、SPECファイルの書き換えが必要になるのでその部分を読み飛ばさないようにしてください。
 
 ### SPEC ファイル
@@ -67,7 +69,9 @@ $ rpmdev-setuptree
 
 ```
 mkdir -p %{buildroot}%{_initddir}
-cp %{_sourcedir}/atheme-services %{buildroot}%{_initddir}/atheme-services
+cp %{_sourcedir}/initscript %{buildroot}%{_initddir}/atheme-services
+mkdir -p %{buildroot}/etc/sysconfig
+cp %{_sourcedir}/sysconfig %{buildroot}/etc/sysconfig/atheme-services
 ```
 
 

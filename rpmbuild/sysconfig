@@ -1,0 +1,3 @@
+# Here you can specify your Atheme command line options.
+
+OPTIONS="-c /etc/atheme/atheme.conf -l $logfile"

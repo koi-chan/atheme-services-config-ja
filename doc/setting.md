@@ -43,7 +43,7 @@ IRCサーバー側で、サーバーリレーの設定をしないと使えま�
 ### リレーするサーバープログラムの指定
 
 "Protocol module"というのが、リレーするIRCサーバーによって変わる部分になります。  
-"loadmodule "modules/protocol/xxxxxx";"という行を探して、使うIRCサーバーにあった設定に変えます。
+「loadmodule "modules/protocol/xxxxxx";」という行を探して、使うIRCサーバーにあった設定に変えます。
 
 ```
 loadmodule "modules/protocol/ngircd";
@@ -138,13 +138,17 @@ $ telnet localhost 6663
 Trying 127.0.0.1...
 Connected to localhost.
 Escape character is '^]'.
-*nick koi-telnet*
-*user koi-chan 0 0 ::*
+
+nick koi-telnet
+user koi-chan 0 0 ::
+
 :irc.kazagakure.net 001 koi-telnet :Welcome to the Internet Relay Network koi-telnet!~koi-chan@localhost
 (省略)
 :irc.kazagakure.net 376 koi-telnet :End of MOTD command
 :NickServ!NickServ@atheme.kazagakure.net NOTICE koi-telnet :Welcome to KAZAGAKURE in Creator's Network IRC, koi-telnet! Here on KAZAGAKURE in Creator's Network IRC, we provide services to enable the registration of nicknames and channels! For details, type /msg NickServ help and /msg ChanServ help.
-*privmsg NickServ help*
+
+privmsg NickServ help
+
 :NickServ!NickServ@atheme.kazagakure.net NOTICE koi-telnet :***** NickServ Help *****
 :NickServ!NickServ@atheme.kazagakure.net NOTICE koi-telnet :NickServ allows users to 'register' a nickname, and stop
 :NickServ!NickServ@atheme.kazagakure.net NOTICE koi-telnet :others from using that nick. NickServ allows the owner of a
@@ -169,11 +173,13 @@ Escape character is '^]'.
 :NickServ!NickServ@atheme.kazagakure.net NOTICE koi-telnet :Other commands: ACC, DROP, HELP, LISTGROUPS, LOGOUT, SETPASS,
 :NickServ!NickServ@atheme.kazagakure.net NOTICE koi-telnet :                STATUS, TAXONOMY, VERIFY
 :NickServ!NickServ@atheme.kazagakure.net NOTICE koi-telnet :***** End of Help *****
-*quit*
+
+quit
+
 :irc.kazagakure.net NOTICE koi-telnet :Connection statistics: client 0.1 kb, server 9.4 kb.
 ERROR :Closing connection
 Connection closed by foreign host.
 ```
 
 上の例では、Telnet を使って実験してみました。  
-うまく動いているようですね
+うまく動いているようですね。

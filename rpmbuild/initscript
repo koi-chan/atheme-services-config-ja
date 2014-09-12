@@ -1,5 +1,5 @@
 #!/bin/bash
-# chkconfig:	 345 81 29
+# chkconfig:	345 81 29
 # description:	Atheme IRC Services
 # processname:	atheme-services
 
@@ -20,7 +20,12 @@ prog="Atheme IRC Services"
 exec=/usr/bin/atheme-services
 pidfile=/var/run/atheme/atheme.pid
 lockfile=/var/lock/subsys/atheme
+logfile=/var/log/atheme/atheme.log
 
+if [ -f /etc/sysconfig/atheme-services -a $UID -eq 0 ]; then
+    . /etc/sysconfig/atheme-services
+fi
+#OPTIONS="$OPTIONS -l $logfile"
 
 start() {
 	echo -n $"Starting $prog: "
